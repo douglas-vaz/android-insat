@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="hello">Hello World, InsatActivity!</string>
     <string name="app_name">Insat</string>
+    <string name="foo">Stub</string>
 
 </resources>

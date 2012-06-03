@@ -9,10 +9,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class InsatActivity extends Activity implements OnClickListener {
 	
@@ -21,7 +25,7 @@ public class InsatActivity extends Activity implements OnClickListener {
 	
     final String img_irc = "http://www.imd.gov.in/section/satmet/img/sector-irc.jpg";
     final String img_ir = "http://www.imd.gov.in/section/satmet/img/sector-ir.jpg";
-    final String img_wv = "http://www.imd.gov.in/section/satmet/img/sector-wv.jpg";
+    final String img_wv = "http://www.imd.gov.in/section/satmet/img/secto	r-wv.jpg";
     final String img_vis = "http://www.imd.gov.in/section/satmet/img/sector-vis.jpg";
 
 	
@@ -101,6 +105,30 @@ public class InsatActivity extends Activity implements OnClickListener {
 			break;
 		}
 		
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		 MenuInflater inflater = getMenuInflater();
+		    inflater.inflate(R.menu.settings_menu, menu);
+		    return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch(item.getItemId())
+		{
+		case R.id.menuStub:		makeToast("Stub1");
+								break;
+		case R.id.menuStub2:	makeToast("Stub2");
+								break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
+	public void makeToast(String foo)
+	{
+		Toast.makeText(InsatActivity.this, foo, Toast.LENGTH_SHORT);
 	}
     
 }
