@@ -45,6 +45,8 @@ public class InsatActivity extends Activity implements OnClickListener {
         show_ir.setOnClickListener(InsatActivity.this);
         show_composite.setOnClickListener(InsatActivity.this);
         
+        But
+        
     }
     
     public Object fetch(String address) throws MalformedURLException,
